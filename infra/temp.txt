@@ -1,0 +1,8 @@
+
+az storage account create --name graphinstorage --location westus2 --resource-group graphin-rg --sku Standard_LRS
+
+
+az functionapp create --resource-group graphin-rg --consumption-plan-location westus2 \
+  --runtime dotnet --functions-version 3 --name graphin --storage-account graphinstorage
+
+func azure functionapp publish graphin
