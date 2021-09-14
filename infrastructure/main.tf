@@ -18,7 +18,7 @@ resource "azurerm_resource_group" "graphin-rg" {
 
 resource "azurerm_storage_account" "graphinstorageaccount" {
   name = "graphinstorage"
-  account_replication_type = "GRS"
+  account_replication_type = "LRS"
   account_tier = "Standard"
   location = azurerm_resource_group.graphin-rg.location
   resource_group_name = azurerm_resource_group.graphin-rg.name
@@ -29,3 +29,7 @@ variable password {}
 variable server {}
 variable apiport {}
 variable pgdatabase {}
+
+output hasura_uri_path {
+  value = "${azurerm_container_group.hasura.fqdn}:${var.apiport}"
+}

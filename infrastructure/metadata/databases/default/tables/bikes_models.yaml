@@ -1,0 +1,10 @@
+table:
+  name: models
+  schema: bikes
+object_relationships:
+- name: brand
+  using:
+    foreign_key_constraint_on: brand_id
+- name: type
+  using:
+    foreign_key_constraint_on: type_id

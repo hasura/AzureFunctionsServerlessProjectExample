@@ -4,5 +4,8 @@ terraform apply \
    -var 'username='$PUSERNAME'' \
    -var 'password='$PPASSWORD'' \
    -var 'pgdatabase=graphindb' \
-   -var 'apiport=8080'
-
+   -var 'apiport=8080' \
+   -auto-approve
+   
+hasura migrate apply --database-name default
+hasura seeds apply --database-name default

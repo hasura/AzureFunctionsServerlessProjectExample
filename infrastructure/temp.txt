@@ -6,3 +6,9 @@ az functionapp create --resource-group graphin-rg --consumption-plan-location we
   --runtime dotnet --functions-version 3 --name graphin --storage-account graphinstorage
 
 func azure functionapp publish graphin
+
+
+
+
+
+az group delete --name graphin-rg --yes

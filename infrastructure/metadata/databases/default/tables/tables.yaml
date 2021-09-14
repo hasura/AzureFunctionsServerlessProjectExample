@@ -1,0 +1,3 @@
+- "!include bikes_brands.yaml"
+- "!include bikes_models.yaml"
+- "!include bikes_types.yaml"

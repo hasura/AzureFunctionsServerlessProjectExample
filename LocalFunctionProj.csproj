@@ -16,6 +16,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="hasura" />
+    <Folder Include="infrastructure\migrations\default" />
   </ItemGroup>
 </Project>

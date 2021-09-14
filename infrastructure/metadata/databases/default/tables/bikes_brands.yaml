@@ -1,0 +1,11 @@
+table:
+  name: brands
+  schema: bikes
+array_relationships:
+- name: models
+  using:
+    foreign_key_constraint_on:
+      column: brand_id
+      table:
+        name: models
+        schema: bikes
